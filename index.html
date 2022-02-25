@@ -1,0 +1,173 @@
+<!-- 4 days max -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" type="text/css" href="/style/index_style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | [Blogr]</title>
+  </head>
+
+  <body>
+    <header class="top-section-header-wrapper">
+      <div class="navbar">
+        <div class="nav-item nav-item-one">
+          <label class="nav-list-wrapper-label" for="nav-input-one">
+            Product
+          </label>
+          <input class="nav-input" id="nav-input-one" type="checkbox" />
+          <nav role="navigation" class="nav-wrapper-nav product-top-wrapper">
+            <a href="#">Overview</a>
+            <a href="#">Pricing</a>
+            <a href="#">Marketplace</a>
+            <a href="#">Features</a>
+            <a href="#">Integrations</a>
+          </nav>
+        </div>
+        <div class="nav-item nav-item-two">
+          <label class="nav-list-wrapper-label" for="nav-input-two"
+            >Company
+          </label>
+          <input class="nav-input" id="nav-input-two" type="checkbox" />
+          <nav role="navigation" class="nav-wrapper-nav company-top-wrapper">
+            <a href="#">About</a>
+            <a href="#">Team</a>
+            <a href="#">Blog</a>
+            <a href="#">Careers</a>
+          </nav>
+        </div>
+        <div class="nav-item nav-item-three">
+          <label class="nav-list-wrapper-label" for="nav-input-three"
+            >Connect
+          </label>
+          <input class="nav-input" id="nav-input-three" type="checkbox" />
+          <nav role="navigation" class="nav-wrapper-nav contact-top-wrapper">
+            <a href="#">Contact</a>
+            <a href="#">Newsletter</a>
+            <a href="#">LinkedIn</a>
+          </nav>
+        </div>
+        <div class="account-wrapper">
+          <span>Login </span><span>Sign Up</span>
+        </div>
+      </div>
+
+      <div class="heading-wrapper">
+        <h1 class="header-title">A modern publishing platform</h1>
+        <aside>Grow your audience and build your online brand</aside>
+        <span>Start for Free</span>
+        <span>Learn More</span>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="content-section-one">
+        <h2 class="main-content-title">Designed for the future</h2>
+        <picture>
+          <source
+            media="(max-width: 400px)"
+            srcset="/images/illustration-editor-mobile.svg"
+          />
+          <source
+            media="(min-width: 400px)"
+            srcset="/images/illustration-editor-desktop.svg"
+          />
+
+          <img src="/images/icon-close.svg" />
+        </picture>
+        <h3 class="discriptive-title intro-title">
+          Introducing an extensible editor
+        </h3>
+        <p class="discriptive-para intro-para">
+          Blogr features an exceedingly intuitive interface which lets you focus
+          on one thing: creating content. The editor supports management of
+          multiple blogs and allows easy manipulation of embeds such as images,
+          videos, and Markdown. Extensibility with plugins and themes provide
+          easy ways to add functionality or change the looks of a blog.
+        </p>
+
+        <h3 class="discriptive-title robust-title">
+          Robust content management
+        </h3>
+        <p class="discriptive-para robust-para">
+          Flexible content management enables users to easily move through
+          posts. Increase the usability of your blog by adding customized
+          categories, sections, format, or flow. With this functionality, you’re
+          in full control.
+        </p>
+      </div>
+      <div class="content-section-two">
+        <img alt="Image of a phone. Here for asthetic reasons." src="/images/illustration-phones.svg"/>
+        <h3 class="discriptive-title infrastructure-title">
+          State of the Art Infrastructure
+        </h3>
+        <p class="discriptive-para infrastructure-para">
+          With reliability and speed in mind, worldwide data centers provide the
+          backbone for ultra-fast connectivity. This ensures your site will load
+          instantly, no matter where your readers are, keeping your site
+          competitive.
+        </p>
+      </div>
+      <div class="content-section-three">
+        <img
+          class="section-three-image"
+          alt="Image of a laptop for only asthetic purpose."
+          src="/images/illustration-laptop-mobile.svg"
+        />
+        <h3 class="discriptive-title simple-title">Free, open, simple</h3>
+        <p class="discriptive-para simple-para">
+          Blogr is a free and open source application backed by a large
+          community of helpful developers. It supports features such as code
+          syntax highlighting, RSS feeds, social media integration, third-party
+          commenting tools, and works seamlessly with Google Analytics. The
+          architecture is clean and is relatively easy to learn.
+        </p>
+
+        <h3 class="discriptive-title powerful-title">Powerful tooling</h3>
+        <p class="discriptive-para powerful-para">
+          Batteries included. We built a simple and straightforward CLI tool
+          that makes customization and deployment a breeze, but capable of
+          producing even the most complicated sites.
+        </p>
+      </div>
+    </main>
+    <footer class="main-page-footer-wrapper">
+      <ul>
+        Product
+        <li>Overview</li>
+        <li>Pricing</li>
+        <li>Marketplace</li>
+        <li>Features</li>
+        <li>Integrations</li>
+      </ul>
+      <ul>
+        Company
+        <li>About</li>
+        <li>Team</li>
+        <li>Blog</li>
+        <li>Careers</li>
+      </ul>
+      <ul>
+        Connect
+        <li>Contact</li>
+        <li>Newsletter</li>
+        <li>LinkedIn</li>
+      </ul>
+    </footer>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>

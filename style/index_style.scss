@@ -1,0 +1,191 @@
+@import "__var.scss";
+@import "__collapsible_list.scss";
+
+*,
+*::after,
+*::before {
+  //See what Kewin turns off. #TODO
+  margin: 0px;
+  font-family: Overpass, Ubuntu, serif;
+  box-sizing: border-box;
+}
+
+// FONTS
+@font-face {
+  src: 
+    // - Weights: 300, 600
+    url("https://fonts.google.com/specimen/Overpass?preview.text_type=custom")
+    // - Weights: 400, 500, 700
+    url("https://fonts.google.com/specimen/Ubuntu?preview.text_type=custom");
+  font-family: Overpass, Ubuntu, serif;
+}
+
+.top-section-header-wrapper {
+  line-height: 2rem;
+  color: $White-text;
+  background: url("/images/bg-pattern-intro-mobile.svg") no-repeat center;
+  background-color: $Light-red-CTA-text;
+  // border-bottom-left-radius: 100px;
+  border-radius: 0px 0px 0px 100px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  place-items: center;
+  .navbar {
+    display: flex;
+    place-content: space-around;
+  }
+  .heading-wrapper {
+    display: grid;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 300;
+    }
+    aside {
+      font-size: 0.9rem;
+      font-weight: 100;
+    }
+    span {
+      border: $White-text solid 1px;
+      padding: 0.1em;
+      border-radius: 100px;
+    }
+  }
+}
+
+// Define font for the page
+// Define font for the page
+// Define font for the page
+@mixin font-galga($color, $align) {
+  .discriptive-title {
+    font-size: 1.3rem;
+    // line-height: 2rem;
+    font-weight: 600;
+    // word-spacing: 10px;
+    text-align: $align;
+    color: $color;
+  }
+  .discriptive-para {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    // word-spacing: 1px;
+    text-align: $align;
+    color: $color;
+  }
+}
+
+.main-content {
+  .content-section-one {
+    @include font-galga(black, center);
+    background-color: white;
+    display: grid;
+    gap: 20px;
+
+    grid-template-areas:
+      "item1"
+      "item2"
+      "item3"
+      "item4"
+      "item5"
+      "item6";
+
+    @for $i from 1 through 7 {
+      //Give each grid item a name from item1 to item4.
+      *:nth-child(#{$i}) {
+        grid-area: item#{$i};
+      }
+      img{
+        width: 10vw;
+      }
+
+    }
+    
+ }
+  @media (min-width: $media-breakpoint) {
+    .content-section-one {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "item1 item1"
+        "item3 item2"
+        "item4 item2"
+        "item5 item2"
+        "item6 item2";
+
+      @for $i from 1 through 7 {
+        //Give each grid item a name from item1 to item4.
+        *:nth-child(#{$i}) {
+          grid-area: item#{$i};
+        }
+      }
+      img:last-of-type {
+        border: 10px solid yellow;
+        width: 10vw;
+      }
+      }
+    }
+  }
+
+  .content-section-two {
+    @include font-galga(white, center);
+    background-color: red;
+    border-radius: 0px 100px / 100px;
+
+    background: url("/images/bg-pattern-circles.svg");
+    background-color: $Very-dark-desaturated-blue;
+
+    padding: 10em 4em 4em 4em;
+    margin-top: 10em;
+    position: relative;
+    display: grid;
+
+    img {
+      position: absolute;
+      height: 90%;
+      transform: translateY(-50%);
+    }
+  }
+  .content-section-three {
+    @include font-galga(black, center);
+    background-color: white;
+
+    display: grid;
+    place-content: center;
+    place-items: center;
+    grid-template-areas: 
+    'item1'
+    'item2'
+    'item3'
+    'item4'
+    'item5';
+
+
+    @for $i from 1 through 5 {
+      //Give each grid item a name from item1 to item4.
+      *:nth-child(#{$i}) {
+        grid-area: item#{$i};
+      }
+    }
+    @media (min-width: $media-breakpoint) {
+    @include font-galga(black, left);
+      grid-template-areas: 
+      "item1 item2"
+      "item1 item3"
+      "item1 item4"
+      "item1 item5";
+      img{
+        width: 100%;
+      }
+    }
+    
+  }
+.main-page-footer-wrapper {
+  background-color: $Very-dark-black-blue-footer-background;
+  border-top-right-radius: 100px 80px;
+}
+.attribution {
+  background-color: pink;
+}

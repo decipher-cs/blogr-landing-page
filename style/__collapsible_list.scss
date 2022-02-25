@@ -1,0 +1,26 @@
+@import "__var.scss";
+
+// .nav-list-wrapper-label{
+//     position: relative;
+//     border: solid crimson 3px;
+// }
+// .navbar{
+//     display: flex;
+// }
+.nav-input{
+    display: none;
+    // visibility: hidden;
+}
+.nav-wrapper-nav{
+    // position: absolute;
+    display: flex;
+    flex-direction: row;
+    border: black solid 4px;
+    place-content: center;
+    place-items: center;
+    display: none;
+}
+.nav-input:checked ~ nav{
+    border: green 5px solid;
+    display: flex;
+}
