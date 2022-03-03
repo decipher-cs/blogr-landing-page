@@ -6,8 +6,10 @@
 *::before {
   //See what Kewin turns off. #TODO
   margin: 0px;
-  font-family: Overpass, Ubuntu, serif;
   box-sizing: border-box;
+}
+img {
+  display: block;
 }
 
 // FONTS
@@ -19,190 +21,97 @@
     url("https://fonts.google.com/specimen/Ubuntu?preview.text_type=custom");
   font-family: Overpass, Ubuntu, serif;
 }
-
 .top-section-header-wrapper {
-  line-height: 2rem;
-  color: $White-text;
-  background: url("/images/bg-pattern-intro-mobile.svg") no-repeat center;
-  background-color: $Light-red-CTA-text;
-  // border-bottom-left-radius: 100px;
-  border-radius: 0px 0px 0px 100px;
+  max-width: 100vw;
+}
 
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.content-section-one {
+  background-color: black;
+  display: none;
+  max-width: 100vw;
+}
+
+.content-section-two {
+  background: url("/images/bg-pattern-circles.svg") bottom center no-repeat;
+  background-color: $Very-dark-gray-blue;
+  border-radius: 0 100px / 0 120px;
+
+  // padding: 3em;
+  overflow: show;
+
+  max-width: 100vw;
+  display: grid;
+  // grid-template-rows: auto auto;
+
+  border: 0px rgb(0, 247, 255) solid;
+  .section-two-img-wrapper {
+    max-width: 100vw;
+    border: 2px solid red;
+    transform: translateY(-40%);
+  }
+
+  .section-two-content-wrapper {
+    max-width: 100vw;
+    border: 2px solid yellow;
+  }
+  @media (min-width: 300px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    // grid-auto-flow: row;
+    // grid-auto-columns: 50% 50%;
+    grid-template-columns: 50% 50%; 
+    grid-template-rows: 200px;
+
+    .section-two-img-wrapper {
+      transform: translateY(0%);
+      transform: scale(150%);
+      border: 0px solid yellow;
+      max-width: 100%;
+    }
+
+    .section-two-content-wrapper {
+      max-width: 100%;
+      border: 10px solid yellow;
+    }
+  }
+}
+
+.content-section-three {
+  background: transparent;
+  max-width: 100vw;
+
+  display: grid;
+  grid-auto-flow: row;
   place-items: center;
-  .navbar {
-    display: flex;
-    place-content: space-around;
-  }
-  .heading-wrapper {
-    display: grid;
 
-    h1 {
-      font-size: 2rem;
-      font-weight: 300;
-    }
-    aside {
-      font-size: 0.9rem;
-      font-weight: 100;
-    }
-    span {
-      border: $White-text solid 1px;
-      padding: 0.1em;
-      border-radius: 100px;
+  @media (min-width: 500px) {
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    .section-three-img-wrapper {
+      transform: translateX(-30%);
     }
   }
 }
 
-// Define font for the page
-// Define font for the page
-// Define font for the page
-@mixin font-galga($color, $align) {
-  .discriptive-title {
-    font-size: 1.3rem;
-    // line-height: 2rem;
-    font-weight: 600;
-    // word-spacing: 10px;
-    text-align: $align;
-    color: $color;
-  }
-  .discriptive-para {
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.5rem;
-    // word-spacing: 1px;
-    text-align: $align;
-    color: $color;
-  }
-}
-
-.main-content {
-  .content-section-one {
-    @include font-galga(black, center);
-    background-color: white;
-    display: grid;
-    gap: 20px;
-    place-items: center;
-
-    grid-template-areas:
-      "item1"
-      "item2"
-      "item3"
-      "item4"
-      "item5"
-      "item6";
-
-    @for $i from 1 through 7 {
-      //Give each grid item a name from item1 to item4.
-      *:nth-child(#{$i}) {
-        grid-area: item#{$i};
-      }
-      .section-one-img-wrapper{
-        border: 0px solid green;
-      }
-      img{
-        width: 100%;
-      }
-
-    }
-    
-  @media (min-width: $media-breakpoint) {
-      display: grid;
-      grid-auto-columns: 1fr 1fr;
-      place-items: center;
-      grid-template-areas:
-        "item1 item1"
-        "item3 item2"
-        "item4 item2"
-        "item5 item2"
-        "item6 item2";
-      
-      .section-one-img-wrapper{
-        background-color: transparent;
-      }
-      img{
-        width: 100%;
-      }
-      }
-    }
-  .content-section-two {
-    @include font-galga(white, center);
-    background-color: red;
-    border-radius: 0px 100px / 100px;
-
-    background: url("/images/bg-pattern-circles.svg");
-    background-color: $Very-dark-desaturated-blue;
-
-    padding: 10em 4em 4em 4em;
-    margin-top: 10em;
-    position: relative;
-    display: grid;
-    grid-auto-flow: row;
-    place-content: center;
-    place-items: center;
-
-    @for $i from 1 through 3{
-      *:nth-child(#{$i}){
-          grid-area: item#{$i};
-      }
-    }
-      img {
-      position: absolute;
-      width: auto;
-      height: 90%;
-      transform: translateY(-50%);
-     }
-    @media (min-width: $media-breakpoint){
-      grid-template-areas: 
-      "item1 item2"
-      "item1 item3";
-      img{
-        position: absolute;
-        width: 200px;
-        height: auto;
-      }
-    }
-  }
-  .content-section-three {
-    @include font-galga(black, center);
-    background-color: white;
-
-    display: grid;
-    place-content: center;
-    place-items: center;
-    grid-template-areas: 
-    'item1'
-    'item2'
-    'item3'
-    'item4'
-    'item5';
-
-
-    @for $i from 1 through 5 {
-      //Give each grid item a name from item1 to item4.
-      *:nth-child(#{$i}) {
-        grid-area: item#{$i};
-      }
-    }
-    @media (min-width: $media-breakpoint) {
-    @include font-galga(black, left);
-      grid-template-areas: 
-      "item1 item2"
-      "item1 item3"
-      "item1 item4"
-      "item1 item5";
-      img{
-        width: 100%;
-      }
-    }
-    
-  }
-}
 .main-page-footer-wrapper {
   background-color: $Very-dark-black-blue-footer-background;
-  border-top-right-radius: 100px 80px;
+  border-radius: 0 100px 0 0 / 0 50px 0 0;
+  max-width: 100vw;
+
+  display: grid;
+  grid-auto-flow: row;
+
+  div {
+    //Choose a better selector
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: 400px) {
+    grid-auto-flow: column;
+  }
 }
-.attribution {
-  background-color: pink;
+.main-page-footer-wrapper::before {
+  display: block;
+  content: url("/images/logo.svg");
 }

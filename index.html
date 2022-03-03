@@ -72,10 +72,11 @@
       <div class="content-section-one">
         <h2 class="main-content-title">Designed for the future</h2>
         <div class="section-one-img-wrapper">
-          <img
+          <!-- <img
             alt="image of a laptop. For asthetic reasons."
             src="/images/illustration-editor-mobile.svg"
-          />
+            width="100%"
+          /> -->
         </div>
         <h3 class="discriptive-title intro-title">
           Introducing an extensible editor
@@ -99,10 +100,14 @@
         </p>
       </div>
       <div class="content-section-two">
+        <div class="section-two-img-wrapper">
         <img
           alt="Image of a phone. Here for asthetic reasons."
-          src="/images/illustration-phones.svg"
+          srcset="/images/illustration-phones.svg 552w"
+          height="100%"
         />
+        </div>
+        <div class="section-two-content-wrapper"
         <h3 class="discriptive-title infrastructure-title">
           State of the Art Infrastructure
         </h3>
@@ -113,51 +118,76 @@
           competitive.
         </p>
       </div>
+    </div>
       <div class="content-section-three">
-        <img
-          class="section-three-image"
-          alt="Image of a laptop for only asthetic purpose."
-          src="/images/illustration-laptop-mobile.svg"
-        />
-        <h3 class="discriptive-title simple-title">Free, open, simple</h3>
-        <p class="discriptive-para simple-para">
-          Blogr is a free and open source application backed by a large
-          community of helpful developers. It supports features such as code
-          syntax highlighting, RSS feeds, social media integration, third-party
-          commenting tools, and works seamlessly with Google Analytics. The
-          architecture is clean and is relatively easy to learn.
-        </p>
+        <div class="section-three-img-wrapper">
+          <!-- <picture>
+            <source
+              srcset="/images/illustration-laptop-mobile.svg"
+              media="(max-width: 500px)"
+            />
+            <source
+              srcset="/images/illustration-laptop-desktop.svg"
+              media="(min-width: 500px)"
+            />
 
-        <h3 class="discriptive-title powerful-title">Powerful tooling</h3>
-        <p class="discriptive-para powerful-para">
-          Batteries included. We built a simple and straightforward CLI tool
-          that makes customization and deployment a breeze, but capable of
-          producing even the most complicated sites.
-        </p>
+            <img
+              class="section-three-image"
+              alt="Image of a laptop for only asthetic purpose."
+              src="/images/illustration-laptop-desktop.svg"
+              width="100%"
+            />
+          </picture> -->
+          <img srcset="
+                      /images/illustration-laptop-mobile.svg 498w,
+                      /images/illustration-laptop-desktop.svg 974w" 
+              sizes="(max-width: 500px) 498px,
+                     (min-width: 500px) 974px"   
+              width="100%"
+          alt="foobaar put something here.">
+        </div>
+        <div class="content-section-three-wrapper">
+          <h3 class="discriptive-title simple-title">Free, open, simple</h3>
+          <p class="discriptive-para simple-para">
+            Blogr is a free and open source application backed by a large
+            community of helpful developers. It supports features such as code
+            syntax highlighting, RSS feeds, social media integration,
+            third-party commenting tools, and works seamlessly with Google
+            Analytics. The architecture is clean and is relatively easy to
+            learn.
+          </p>
+
+          <h3 class="discriptive-title powerful-title">Powerful tooling</h3>
+          <p class="discriptive-para powerful-para">
+            Batteries included. We built a simple and straightforward CLI tool
+            that makes customization and deployment a breeze, but capable of
+            producing even the most complicated sites.
+          </p>
+        </div>
       </div>
     </main>
     <footer class="main-page-footer-wrapper">
-      <ul>
-        Product
-        <li>Overview</li>
-        <li>Pricing</li>
-        <li>Marketplace</li>
-        <li>Features</li>
-        <li>Integrations</li>
-      </ul>
-      <ul>
-        Company
-        <li>About</li>
-        <li>Team</li>
-        <li>Blog</li>
-        <li>Careers</li>
-      </ul>
-      <ul>
-        Connect
-        <li>Contact</li>
-        <li>Newsletter</li>
-        <li>LinkedIn</li>
-      </ul>
+      <div class="footer-links footer-link-one">
+        <div>Product</div>
+        <a href="#"> Overview</a>
+        <a href="#"> Pricing</a>
+        <a href="#"> Marketplace</a>
+        <a href="#"> Features</a>
+        <a href="#"> Integrations</a>
+      </div>
+      <div class="footer-links footer-link-two">
+        <div>Company</div>
+        <a href="#"> About</a>
+        <a href="#"> Team</a>
+        <a href="#"> Blog</a>
+        <a href="#"> Careers</a>
+      </div>
+      <div class="footer-links footer-link-three">
+        <div>Connect</div>
+        <a href="#"> Contact</a>
+        <a href="#"> Newsletter</a>
+        <a href="#"> LinkedIn</a>
+      </div>
     </footer>
 
     <div class="attribution">
