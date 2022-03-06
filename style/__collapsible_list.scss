@@ -1,26 +1,31 @@
 @import "__var.scss";
 
-// .nav-list-wrapper-label{
-//     position: relative;
-//     border: solid crimson 3px;
-// }
+
 // .navbar{
 //     display: flex;
+//     display: none;
+//     background-color: red;
 // }
 .nav-input{
     display: none;
     // visibility: hidden;
 }
 .nav-wrapper-nav{
-    // position: absolute;
-    display: flex;
-    flex-direction: row;
-    border: black solid 4px;
-    place-content: center;
-    place-items: center;
     display: none;
+    // display: flex;
+    position: absolute;
+
+    background-color: white;
+    border-radius: 5%;
+    box-shadow: 0px 0px 10px 1px;
+    padding: 1em;
+    line-height: 2em;
+
+    flex-direction: column;
+    margin: 10px 0px;
+    z-index: 9999;
 }
 .nav-input:checked ~ nav{
     border: green 5px solid;
-    display: flex;
+    display: none;
 }

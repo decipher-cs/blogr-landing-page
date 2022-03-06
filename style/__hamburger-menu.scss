@@ -1,0 +1,91 @@
+/*HAMBURGER MENU FOR THE MOBILE VERSION*/
+
+@media (max-width: 0px) {//SET this.
+    .menu-btn-container{
+        display: none;
+    }
+}
+
+@mixin hamburger-design {
+    background-color: white;
+    border-radius: 500px;
+    width: 20px;
+    height: 2px;
+    transition: transform 300ms, background-color 300ms;
+}
+
+#menu-btn-checkbox{
+    display: none;
+    width: 20px;
+    height: 20px;
+}
+.menu-btn-container{
+    border: black 0px solid;
+    height: min-content;
+    width: min-content;
+    padding: 0.8em;
+    cursor: pointer;
+}
+
+    /*BUTTON DESIGN*/
+.menu-btn{
+    @include hamburger-design();
+    position: relative;
+    margin: 4px 0px;
+}
+.menu-btn::before{
+    display: block;
+    content: '';
+    @include hamburger-design();
+    position: absolute;
+    top: 5px;
+}
+.menu-btn::after{
+    display: block;
+    content: '';
+    @include hamburger-design();
+    position: absolute;
+    top: -5px;
+}
+
+
+    /* ANIMATION */
+.menu-btn-checkbox:checked ~ .menu-btn-container .menu-btn{
+    background-color: transparent;
+}
+.menu-btn-checkbox:checked ~ .menu-btn-container .menu-btn::before{
+    transform: rotate(-45deg) translateX(0px) translateY(-7px);
+}
+.menu-btn-checkbox:checked ~ .menu-btn-container .menu-btn::after{
+    transform: rotate(45deg) translateX(0px) translateY(7px);
+}
+
+
+.menu-btn-checkbox:checked ~ .navbar{
+//Add filter on the background. #ToDo        
+    position: absolute;
+    overflow: show;
+    
+    background-color: white;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 1em;
+    gap: 10px;
+    
+    display: grid;
+    place-items: center;
+    
+    width: 90vw;
+    max-height: 200px;
+    inset: 5%;
+    transition: max-height 300ms;
+    z-index: 999;
+}
+
+.navbar{
+    position: absolute;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 300ms, background-color 300ms;
+}
+
