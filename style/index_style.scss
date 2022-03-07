@@ -1,4 +1,4 @@
-@import "__var.scss", "__collapsible_list.scss", "__hamburger-menu.scss";
+@import "__var.scss", "__hamburger-menu.scss";
 
 *,
 *::after,
@@ -11,7 +11,10 @@
 img {
   display: block;
 }
-
+a:visited, a:link{
+  color: black;
+  text-decoration: none;
+}
 // FONTS
 @font-face {
   src: 
@@ -36,7 +39,8 @@ img {
 
   .nav-list-wrapper-label::after {
     display: inline-block;
-    content: url("/images/icon-arrow-light.svg");
+    content: url("/images/icon-arrow-dark.svg");
+    // content: url("/images/icon-arrow-light.svg");
   }
 }
 .top-section-header-wrapper::before {
