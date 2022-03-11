@@ -18,6 +18,7 @@
   height: 20px;
 }
 .menu-btn-container {
+  place-self: flex-end;
   border: black 0px solid;
   height: min-content;
   width: min-content;
@@ -57,7 +58,7 @@
   transform: rotate(45deg) translateX(0px) translateY(7px);
 }
 // @media (max-width: 500px) {
-  
+
 .menu-btn-checkbox:checked ~ .navbar {
   //Add filter on the background. #ToDo
   border: 1px solid;
@@ -79,10 +80,15 @@
 
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-self: end;
 
   max-height: 0px;
-  width: 90vw;
-  top: 50px;
+
+  @media (min-width: 500px) {width: auto;}
+                             width: 90vw;
+
+  top: 60px;
 
   transition: max-height 300ms ease-in-out, padding 300ms ease-in-out,
     border 300ms ease-in-out;
@@ -124,7 +130,7 @@
   padding: 0em;
 
   max-height: 0px;
-  width: 100%;
+  min-width: 100%;
 
   transition: max-height 300ms ease-in-out, padding 300ms ease-in-out;
 }
@@ -147,19 +153,21 @@
     overflow: visible;
 
     background-color: transparent;
-    border: 5px solid;
+    border: 0px solid;
     padding: 0.5em;
     // gap: 10px;
 
+    justify-self: unset;
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: row;
 
     max-height: unset;
-    width: auto;
+    // max-width: 100vw;
   }
 
   .nav-input:checked ~ .nav-wrapper-nav {
-    overflow:visible;
+    overflow: visible;
     padding: 1.4em;
     max-height: 100vh;
     border: 1px solid;
@@ -175,9 +183,46 @@
     padding: 0em;
 
     max-height: 0px;
-    width: fit-content;
+    min-width: fit-content;
 
     top: 30px;
     // transition: max-height 300ms ease-in-out, padding 300ms ease-in-out;
+  }
+}
+
+////////////////////////////
+/* Account Button Design */
+////////////////////////////
+
+.account-btn-wrapper {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  button:first-of-type {
+    background-color: transparent;
+  }
+  button:last-of-type {
+    background-color: $Light-red-CTA-text;
+  }
+  button:first-of-type:hover {
+    background-color: $Light-red-CTA-text;
+  }
+  button:last-of-type:hover {
+    background-color: transparent;
+  }
+
+  @media (max-width: 300px) {
+    button:first-of-type {
+      background-color: transparent;
+    }
+    button:last-of-type {
+      background-color: $Light-red-CTA-text;
+    }
+    button:first-of-type:hover {
+      background-color: $Light-red-CTA-text;
+    }
+    button:last-of-type:hover {
+      background-color: transparent;
+    }
   }
 }
