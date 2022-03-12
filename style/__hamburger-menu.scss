@@ -65,8 +65,7 @@
   padding: 1em;
 
   max-height: 90vh;
-  transition: max-height 300ms ease-in-out, padding 300ms ease-in-out,
-    border 300ms ease-in-out;
+  transition: max-height 300ms ease-in-out, padding 300ms ease-in-out;
 }
 
 .navbar {
@@ -81,17 +80,16 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-self: end;
+  justify-self: center;
 
   max-height: 0px;
 
-  @media (min-width: 500px) {width: auto;}
+  @media (min-width: 650px) {width: auto;}
                              width: 90vw;
 
-  top: 60px;
+  top: 100px;
 
-  transition: max-height 300ms ease-in-out, padding 300ms ease-in-out,
-    border 300ms ease-in-out;
+  transition: max-height 300ms ease-in-out, padding 300ms ease-in-out;
   z-index: 9;
 }
 
@@ -109,6 +107,10 @@
   position: relative;
   display: grid;
   place-items: center;
+}
+.nav-list-wrapper-label{
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .nav-input:checked ~ .nav-wrapper-nav {
@@ -142,7 +144,7 @@
 //////////////////////////
 
 //Later on use JS to uncheck the checkbox insdead of using all these classes. Add eventlistner and use property "checkAll, false".
-@media (min-width: 500px) {
+@media (min-width: 650px) {
   .menu-btn-container {
     display: none;
   }
