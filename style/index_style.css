@@ -66,7 +66,6 @@
 }
 
 .menu-btn-checkbox:checked ~ .navbar {
-  border: 1px solid;
   padding: 1em;
   max-height: 90vh;
   transition: max-height 300ms ease-in-out, padding 300ms ease-in-out;
@@ -76,9 +75,9 @@
   position: absolute;
   overflow: hidden;
   background-color: white;
-  border: 0px solid;
   border-radius: 10px;
   gap: 10px;
+  box-shadow: 0px 0px 8px white;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -91,7 +90,8 @@
 }
 @media (min-width: 650px) {
   .navbar {
-    width: auto;
+    box-shadow: 0px 0px 0px;
+    width: unset;
   }
 }
 
@@ -110,6 +110,7 @@
 }
 
 .nav-list-wrapper-label {
+  position: relative;
   display: flex;
   flex-wrap: nowrap;
 }
@@ -156,7 +157,7 @@
   .nav-input:checked ~ .nav-wrapper-nav {
     overflow: visible;
     padding: 1.4em;
-    max-height: 100vh;
+    max-height: 1000vh;
     border: 1px solid;
   }
 
@@ -174,16 +175,34 @@
   }
 }
 /* Account Button Design */
+.account-btn-wrapper::before {
+  overflow-x: visible;
+  display: inline-block;
+  content: "";
+  width: 80vw;
+  color: red;
+  border: solid 1px #e4e4e4;
+  border-radius: 50%;
+  align-self: center;
+}
+
+@media (min-width: 650px) {
+  .account-btn-wrapper::before {
+    display: none;
+  }
+}
 .account-btn-wrapper {
-  flex-grow: 1;
+  align-self: center;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  width: 130px;
+  gap: 10px;
 }
 .account-btn-wrapper button:first-of-type {
   background-color: transparent;
 }
 .account-btn-wrapper button:last-of-type {
-  background-color: #ff525d;
+  background: linear-gradient(90deg, #fe866e, #ff4757);
 }
 .account-btn-wrapper button:first-of-type:hover {
   background-color: #ff525d;
@@ -191,12 +210,17 @@
 .account-btn-wrapper button:last-of-type:hover {
   background-color: transparent;
 }
-@media (max-width: 300px) {
+@media (min-width: 650px) {
+  .account-btn-wrapper {
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
   .account-btn-wrapper button:first-of-type {
     background-color: transparent;
   }
   .account-btn-wrapper button:last-of-type {
-    background-color: #ff525d;
+    background: #ffffff;
   }
   .account-btn-wrapper button:first-of-type:hover {
     background-color: #ff525d;
@@ -204,16 +228,6 @@
   .account-btn-wrapper button:last-of-type:hover {
     background-color: transparent;
   }
-}
-
-* {
-  text-align: center;
-  line-height: 1.5em;
-}
-
-.section-one-content-wrapper {
-  text-align: left;
-  line-height: 1.8em;
 }
 
 *,
@@ -243,8 +257,8 @@ button {
   border: 0px solid;
   border-radius: 20px;
   padding: 0.7em;
-  margin: 0px 5px;
-  background-color: aquamarine;
+  background-color: white;
+  cursor: pointer;
 }
 
 @font-face {
@@ -274,6 +288,7 @@ button {
   justify-content: center;
 }
 .top-section-header-wrapper .account-options button:first-of-type {
+  color: red;
   min-width: 100px;
   background-color: white;
   border: 1px solid white;
@@ -294,14 +309,21 @@ button {
   border: 1px solid white;
 }
 .top-section-header-wrapper .nav-list-wrapper-label::after {
-  display: inline-block;
+  position: absolute;
+  display: inline;
   padding: 0px 0.4em;
   content: url("/images/icon-arrow-dark.svg");
+  left: 100%;
+  transition: transform 400ms;
 }
-@media (min-width: 500px) {
+@media (min-width: 650px) {
   .top-section-header-wrapper .nav-list-wrapper-label::after {
     content: url("/images/icon-arrow-light.svg");
   }
+}
+.top-section-header-wrapper .nav-input:checked ~ .nav-list-wrapper-label::after {
+  transform: rotate(180deg);
+  transition: transform 400ms;
 }
 
 .top-section-header-wrapper::before {
@@ -312,6 +334,7 @@ button {
 .content-section-one {
   padding: 2em;
   margin-top: 100px;
+  margin-bottom: 40%;
   overflow: hidden;
   max-width: 100vw;
   position: relative;
@@ -322,12 +345,22 @@ button {
   display: grid;
   gap: 20px;
 }
-@media (min-width: 500px) {
+.content-section-one img:last-of-type {
+  display: none;
+}
+@media (min-width: 700px) {
   .content-section-one {
+    margin-bottom: 100px;
     place-items: center;
     place-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+  .content-section-one img:first-of-type {
+    display: none;
+  }
+  .content-section-one img:last-of-type {
+    display: inline-block;
   }
   .content-section-one .main-content-title {
     flex-basis: 100%;
@@ -358,6 +391,7 @@ button {
 }
 .content-section-two .section-two-img-wrapper {
   transform: translateY(-40%);
+  margin-bottom: -40%;
 }
 @media (min-width: 700px) {
   .content-section-two {
@@ -376,19 +410,39 @@ button {
 }
 
 .content-section-three {
+  padding: 0em;
   background: transparent;
   max-width: 100vw;
   display: grid;
   grid-auto-flow: row;
-  place-items: center;
+  align-items: center;
+}
+.content-section-three .content-section-three-wrapper {
+  display: grid;
+  gap: 20px;
+  padding: 2em;
+}
+.content-section-three img:first-of-type {
+  display: none;
 }
 @media (min-width: 500px) {
   .content-section-three {
     grid-auto-flow: column;
     grid-template-columns: 1fr 1fr;
   }
+  .content-section-three .content-section-three-wrapper {
+    display: grid;
+    gap: 20px;
+    padding: 2em 2em 3em 0em;
+  }
   .content-section-three .section-three-img-wrapper {
     transform: translateX(-30%);
+  }
+  .content-section-three .section-three-img-wrapper img:first-of-type {
+    display: block;
+  }
+  .content-section-three .section-three-img-wrapper img:last-of-type {
+    display: none;
   }
 }
 
@@ -396,20 +450,26 @@ button {
   background-color: #25252d;
   border-radius: 0 100px 0 0/0 50px 0 0;
   max-width: 100vw;
+  padding: 2em 5em;
+  gap: 10px;
   display: grid;
   grid-auto-flow: row;
 }
-.main-page-footer-wrapper div {
+.main-page-footer-wrapper .footer-links {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 400px) {
+@media (min-width: 500px) {
   .main-page-footer-wrapper {
     grid-auto-flow: column;
   }
 }
 
 .main-page-footer-wrapper::before {
-  display: block;
+  display: inline-block;
   content: url("/images/logo.svg");
+}
+
+.attribution {
+  background: linear-gradient(90deg, #ff4858, #ff8f71);
 }/*# sourceMappingURL=index_style.css.map */
