@@ -1,1 +1,33 @@
-//Create custom padding to adjust for the big ass mobile phones.
+
+
+/////////////////////////////////////////////////////
+// NAVBAR - DESKTOP - AUTOCLOSE DROPDOWN ON UNFOCUS//
+////////////////////////////////////////////////////
+
+const navItemCheckbox = document.querySelectorAll(".nav-input");
+const navItemLabel = document.querySelectorAll(".nav-list-wrapper-label")
+
+
+navItemLabel.forEach((e)=>{
+    e.setAttribute("tabindex", "0")
+})
+
+navItemLabel.forEach((label)=>{
+    label.addEventListener("blur", (e)=>{
+        let navCheckbox = document.getElementById(label.getAttribute("for"));
+        navCheckbox.checked = false;
+
+    })
+})
+
+////////////////////////////////////////////////
+/////////  Auto close hamburger menu  /////////
+//////////////////////////////////////////////
+
+const hamburger = document.getElementById("menu-btn-checkbox")
+
+window.addEventListener("resize", (btn)=>{
+    if (window.innerWidth > 700){
+        hamburger.checked = false
+    }
+})

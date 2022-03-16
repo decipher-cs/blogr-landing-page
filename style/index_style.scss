@@ -24,7 +24,7 @@ button {
   border: 0px solid;
   border-radius: 20px;
   padding: 0.7em;
-  // width: 100px;
+  min-width: 100px;
   background-color: white;
   cursor: pointer;
 }
@@ -64,9 +64,9 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 15px;
 
     button:first-of-type {
-      color: red;
       min-width: 100px;
       background-color: white;
       border: 1px solid white;
@@ -173,8 +173,11 @@ button {
     transform: translateY(-40%);
     margin-bottom: -40%;
   }
+  .section-two-content-wrapper{
+    padding: 2em 1em;
+  }
 
-  @media (min-width: 700px) {
+  @media (min-width: 650px) {
     padding: 0px;
     margin: 0px;
 

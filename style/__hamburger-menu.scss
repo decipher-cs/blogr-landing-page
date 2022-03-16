@@ -82,7 +82,7 @@
 
   max-height: 0px;
 
-  @media (min-width: 650px) {
+  @media (min-width: 700px) {
     box-shadow: 0px 0px 0px;
     width: unset;
   }
@@ -98,8 +98,9 @@
 /////////* NAV ACCODRIAN DESIGN */////////
 //////////////////////////////////////////
 
-.nav-input {
+.nav-input {//changing chang changed
   display: none;
+  // display: flex;
 }
 .account-btn-wrapper {
   align-self: center;
@@ -145,8 +146,10 @@
 //* Navbar on desktop *//
 //////////////////////////
 
-//Later on use JS to uncheck the checkbox insdead of using all these classes. Add eventlistner and use property "checkAll, false".
-@media (min-width: 650px) {
+@media (min-width: 700px) {
+  .nav-item{
+    padding-right: clamp(1em, 5%,100px);
+  }
   .menu-btn-container {
     display: none;
   }
@@ -189,7 +192,8 @@
     max-height: 0px;
     min-width: fit-content;
 
-    top: 30px;
+    top: 50px;
+    z-index: 9;
     // transition: max-height 300ms ease-in-out, padding 300ms ease-in-out;
   }
 }
@@ -210,7 +214,7 @@
 
     align-self: center;
 }
-@media (min-width: 650px) {
+@media (min-width: 700px) {
 .account-btn-wrapper::before {
   display: none; 
   }
@@ -237,7 +241,7 @@
     background-color: transparent;
   }
 
-  @media (min-width: 650px) {
+  @media (min-width: 700px) {
     flex-direction: row;
     flex-grow: 1;
     

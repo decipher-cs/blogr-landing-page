@@ -88,7 +88,7 @@
   transition: max-height 300ms ease-in-out, padding 300ms ease-in-out;
   z-index: 9;
 }
-@media (min-width: 650px) {
+@media (min-width: 700px) {
   .navbar {
     box-shadow: 0px 0px 0px;
     width: unset;
@@ -135,7 +135,11 @@
   transition: max-height 300ms ease-in-out, padding 300ms ease-in-out;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 700px) {
+  .nav-item {
+    padding-right: clamp(1em, 5%, 100px);
+  }
+
   .menu-btn-container {
     display: none;
   }
@@ -171,7 +175,8 @@
     min-width: -webkit-fit-content;
     min-width: -moz-fit-content;
     min-width: fit-content;
-    top: 30px;
+    top: 50px;
+    z-index: 9;
   }
 }
 /* Account Button Design */
@@ -186,7 +191,7 @@
   align-self: center;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 700px) {
   .account-btn-wrapper::before {
     display: none;
   }
@@ -210,7 +215,7 @@
 .account-btn-wrapper button:last-of-type:hover {
   background-color: transparent;
 }
-@media (min-width: 650px) {
+@media (min-width: 700px) {
   .account-btn-wrapper {
     flex-direction: row;
     flex-grow: 1;
@@ -228,6 +233,21 @@
   .account-btn-wrapper button:last-of-type:hover {
     background-color: transparent;
   }
+}
+
+* {
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.section-one-content-wrapper {
+  text-align: left;
+  line-height: 1.8em;
+}
+
+footer,
+.section-two-content-wrapper {
+  color: white;
 }
 
 *,
@@ -257,6 +277,7 @@ button {
   border: 0px solid;
   border-radius: 20px;
   padding: 0.7em;
+  min-width: 100px;
   background-color: white;
   cursor: pointer;
 }
@@ -286,9 +307,9 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 15px;
 }
 .top-section-header-wrapper .account-options button:first-of-type {
-  color: red;
   min-width: 100px;
   background-color: white;
   border: 1px solid white;
@@ -393,7 +414,10 @@ button {
   transform: translateY(-40%);
   margin-bottom: -40%;
 }
-@media (min-width: 700px) {
+.content-section-two .section-two-content-wrapper {
+  padding: 2em 1em;
+}
+@media (min-width: 650px) {
   .content-section-two {
     padding: 0px;
     margin: 0px;
