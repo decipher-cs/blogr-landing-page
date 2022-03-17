@@ -72,8 +72,8 @@ button {
       border: 1px solid white;
     }
     button:first-of-type:hover {
-      background-color: transparent;
-      border: 1px solid white;
+      background-color: #ff7b86;
+      border: 0px solid white;
       color: white;
     }
     button:last-of-type {
@@ -128,6 +128,9 @@ button {
     display: none;
   }
   @media (min-width: 700px) {
+  .section-one-content-wrapper {
+    padding-left: 10vw; 
+  }
     margin-bottom: 100px;
 
     place-items: center;
@@ -145,6 +148,7 @@ button {
       flex-basis: 100%;
       order: 1;
       text-align: center;
+      padding-bottom: 2em;
     }
     .section-one-img-wrapper {
       flex-basis: 50%;
@@ -177,7 +181,7 @@ button {
     padding: 2em 1em;
   }
 
-  @media (min-width: 650px) {
+  @media (min-width: 700px) {
     padding: 0px;
     margin: 0px;
 
@@ -212,14 +216,12 @@ button {
     display: none;
   }
 
-  @media (min-width: 500px) {
+  @media (min-width: 700px) {
     grid-auto-flow: column;
     grid-template-columns: 1fr 1fr;
 
     .content-section-three-wrapper {
-      display: grid;
-      gap: 20px;
-      padding: 2em 2em 3em 0em;
+      margin-right: 10vw;
     }
 
     .section-three-img-wrapper {

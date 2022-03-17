@@ -85,12 +85,18 @@
   @media (min-width: 700px) {
     box-shadow: 0px 0px 0px;
     width: unset;
+    // transition: padding 0ms;
   }
+    
+  
   width: 90vw;
 
   top: 100px;
 
+  @media (max-width: 695px) {
   transition: max-height 300ms ease-in-out, padding 300ms ease-in-out;
+  }
+  // transition: max-height 300ms ease-in-out, padding 00ms ease-in-out;
   z-index: 9;
 }
 
@@ -98,9 +104,9 @@
 /////////* NAV ACCODRIAN DESIGN */////////
 //////////////////////////////////////////
 
-.nav-input {//changing chang changed
+.nav-input {
+  //changing chang changed
   display: none;
-  // display: flex;
 }
 .account-btn-wrapper {
   align-self: center;
@@ -147,8 +153,8 @@
 //////////////////////////
 
 @media (min-width: 700px) {
-  .nav-item{
-    padding-right: clamp(1em, 5%,100px);
+  .nav-item {
+    padding-right: clamp(1em, 5%, 100px);
   }
   .menu-btn-container {
     display: none;
@@ -202,21 +208,18 @@
 /* Account Button Design */
 ////////////////////////////
 
-
 .account-btn-wrapper::before {
-    overflow-x: visible;
-    display: inline-block;
-    content: "";
-    width: 80vw;
-    color: red;
-    border:solid 1px #e4e4e4;
-    border-radius: 50%;
+  overflow-x: visible;
+  display: inline-block;
+  content: "";
+  width: 80vw;
+  color: red;
+  border: solid 1px #e4e4e4;
+  border-radius: 50%;
 
-    align-self: center;
-}
-@media (min-width: 700px) {
-.account-btn-wrapper::before {
-  display: none; 
+  align-self: center;
+  @media (min-width: 700px) {
+    display: none;
   }
 }
 
@@ -227,7 +230,6 @@
   width: 130px;
   gap: 10px;
 
-
   button:first-of-type {
     background-color: transparent;
   }
@@ -235,29 +237,29 @@
     background: linear-gradient(90deg, #fe866e, #ff4757);
   }
   button:first-of-type:hover {
-    background-color: $Light-red-CTA-text;
+    background: $Light-red-CTA-text;
   }
   button:last-of-type:hover {
-    background-color: transparent;
+    background: transparent;
   }
 
   @media (min-width: 700px) {
     flex-direction: row;
     flex-grow: 1;
-    
+
     justify-content: flex-end;
-    
+
     button:first-of-type {
-      background-color: transparent;
+      background: transparent;
     }
     button:last-of-type {
-      background: #ffffff;
+      background: hsl(0, 0%, 100%);
     }
     button:first-of-type:hover {
-      background-color: $Light-red-CTA-text;
+      background: $Light-red-CTA-text;
     }
     button:last-of-type:hover {
-      background-color: transparent;
+      background:#ff7b86;
     }
   }
 }
