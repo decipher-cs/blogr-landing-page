@@ -24,10 +24,16 @@ navItemLabel.forEach((label)=>{
 /////////  Auto close hamburger menu  /////////
 //////////////////////////////////////////////
 
-const hamburger = document.getElementById("menu-btn-checkbox")
+const hamburgerCheckbox = document.getElementById("menu-btn-checkbox")
 
 window.addEventListener("resize", (btn)=>{
     if (window.innerWidth > 700){
-        hamburger.checked = false
+        hamburgerCheckbox.checked = false
     }
 })
+
+window.onscroll = function(){
+    if (window.pageYOffset > 371){
+        hamburgerCheckbox.checked = false
+    }
+}

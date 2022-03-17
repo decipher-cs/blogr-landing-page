@@ -1,15 +1,85 @@
-// *{
-//     text-align: center;
-//     line-height: 1.5em;
-// }
-// @media (min-width: 600px) {
-// }
-    
-// .section-one-content-wrapper{
-//     text-align: left;
-//     line-height: 1.8em;
-// }
-// footer,
-// .section-two-content-wrapper{
-//     color: white;
-// }
+@font-face {
+  src: 
+      // - Weights: 300, 600
+    url("https://fonts.google.com/specimen/Overpass?preview.text_type=custom")
+    // - Weights: 400, 500, 700
+    url("https://fonts.google.com/specimen/Ubuntu?preview.text_type=custom");
+  font-family: Overpass, Ubuntu, serif;
+}
+
+* {
+  font-family: Overpass, Ubuntu, serif;
+}
+$line-height: 25px;
+header {
+  @media (min-width: 700px) {
+    .navbar {
+      color: hsla(0, 14%, 95%, 0.911);
+    }
+    .nav-item:focus-within {
+      color: white;
+    }
+  }
+  .navbar{
+      color: black;
+  }
+    .nav-input:checked ~ .nav-list-wrapper-label{
+    color: rgb(165, 165, 165);
+}
+  color: white;
+}
+header a {
+  color: black;
+}
+.content-section-one,
+.section-one-content-wrapper {
+  text-align: center;
+  color: black;
+  h3 {
+    font-size: 1.6rem;
+    line-height: $line-height;
+  }
+  p {
+    font-size: 0.9rem;
+    line-height: $line-height;
+  }
+  @media (min-width: 700px) {
+    text-align: left;
+  }
+}
+.section-two-content-wrapper {
+  text-align: center;
+  color: white;
+  h3 {
+    font-size: 1.6rem;
+    line-height: $line-height;
+  }
+  p {
+    font-size: 0.9rem;
+    line-height: $line-height;
+  }
+  @media (min-width: 700px) {
+    text-align: left;
+  }
+}
+.content-section-three,
+.section-three-content-wrapper {
+  text-align: center;
+  color: black;
+  h3 {
+    font-size: 1.6rem;
+    line-height: $line-height;
+  }
+  p {
+    font-size: 0.9rem;
+    line-height: $line-height;
+  }
+  @media (min-width: 700px) {
+    text-align: left;
+  }
+}
+
+.attribution a,
+footer a {
+  color: white;
+}
