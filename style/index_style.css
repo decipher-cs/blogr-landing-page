@@ -166,7 +166,7 @@
     overflow: visible;
     padding: 1.4em;
     max-height: 1000vh;
-    border: 1px solid;
+    border: 0px solid;
     box-shadow: white 0 0 20px 2px;
   }
 
@@ -174,13 +174,13 @@
     position: absolute;
     background-color: white;
     border-radius: 5px;
-    gap: 8px;
+    gap: 18px;
     padding: 0em;
     max-height: 0px;
-    min-width: -webkit-fit-content;
-    min-width: -moz-fit-content;
-    min-width: fit-content;
+    width: 150px;
     top: 50px;
+    left: 0px;
+    right: 0px;
     z-index: 9;
   }
 }
@@ -252,6 +252,10 @@ header {
   text-align: center;
   color: white;
 }
+header h1 {
+  font-size: 3rem;
+  font-weight: 400;
+}
 header .navbar {
   color: black;
 }
@@ -301,10 +305,12 @@ header a {
 .section-one-content-wrapper h3 {
   font-size: 1.6rem;
   line-height: 25px;
+  color: #2c2d3f;
 }
 .content-section-one p,
 .section-one-content-wrapper p {
   font-size: 0.9rem;
+  color: #4b5862;
   line-height: 25px;
 }
 @media (min-width: 700px) {
@@ -321,9 +327,11 @@ header a {
 .section-two-content-wrapper h3 {
   font-size: 1.6rem;
   line-height: 25px;
+  color: white;
 }
 .section-two-content-wrapper p {
   font-size: 0.9rem;
+  color: white;
   line-height: 25px;
 }
 @media (min-width: 700px) {
@@ -341,10 +349,12 @@ header a {
 .section-three-content-wrapper h3 {
   font-size: 1.6rem;
   line-height: 25px;
+  color: #2c2d3f;
 }
 .content-section-three p,
 .section-three-content-wrapper p {
   font-size: 0.9rem;
+  color: #4b5862;
   line-height: 25px;
 }
 @media (min-width: 700px) {
@@ -355,9 +365,12 @@ header a {
 }
 
 .attribution a,
-footer,
-footer a {
+footer {
   color: white;
+}
+
+footer a {
+  color: #c8c8cb;
 }
 
 *,
@@ -377,6 +390,7 @@ a:link {
 }
 
 label:hover {
+  position: relative;
   text-decoration: underline;
   cursor: pointer;
 }
@@ -388,6 +402,7 @@ button {
   min-width: 100px;
   background-color: white;
   cursor: pointer;
+  transition: background 500ms;
 }
 
 .top-section-header-wrapper {
@@ -609,4 +624,6 @@ button {
 
 .attribution {
   background: linear-gradient(90deg, #ff4858, #ff8f71);
+  display: flex;
+  place-content: center;
 }/*# sourceMappingURL=index_style.css.map */
