@@ -12,22 +12,24 @@
 }
 $line-height: 25px;
 header {
-  @media (min-width: 700px) {
-    .navbar {
-      color: hsla(0, 14%, 95%, 0.911);
-    }
-    .nav-item:focus-within {
-      color: white;
-    }
-  }
-  .navbar{
-      color: black;
-  }
-    .nav-input:checked ~ .nav-list-wrapper-label{
-    color: rgb(165, 165, 165);
-}
+    text-align: center;
   color: white;
+  .navbar {
+    color: black;
+  }
+  .nav-input:checked ~ .nav-list-wrapper-label {
+    color:#697686;
+  }
+  @media (min-width: 700px) {
+    .nav-list-wrapper-label {
+      color: #ffccca;
+    }
+    .nav-input:checked ~ .nav-list-wrapper-label {
+        color: rgb(255, 255, 255);
+    }
+  }
 }
+
 header a {
   color: black;
 }
@@ -80,6 +82,7 @@ header a {
 }
 
 .attribution a,
-footer, footer a {
+footer,
+footer a {
   color: white;
 }

@@ -249,21 +249,22 @@
 }
 
 header {
+  text-align: center;
   color: white;
-}
-@media (min-width: 700px) {
-  header .navbar {
-    color: rgba(244, 240, 240, 0.911);
-  }
-  header .nav-item:focus-within {
-    color: white;
-  }
 }
 header .navbar {
   color: black;
 }
 header .nav-input:checked ~ .nav-list-wrapper-label {
-  color: #a5a5a5;
+  color: #697686;
+}
+@media (min-width: 700px) {
+  header .nav-list-wrapper-label {
+    color: #ffccca;
+  }
+  header .nav-input:checked ~ .nav-list-wrapper-label {
+    color: white;
+  }
 }
 
 header a {
@@ -333,7 +334,8 @@ header a {
 }
 
 .attribution a,
-footer, footer a {
+footer,
+footer a {
   color: white;
 }
 
