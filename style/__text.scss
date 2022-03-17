@@ -12,21 +12,47 @@
 }
 $line-height: 25px;
 header {
-    text-align: center;
+  text-align: center;
   color: white;
   .navbar {
     color: black;
   }
   .nav-input:checked ~ .nav-list-wrapper-label {
-    color:#697686;
+    color: #697686;
   }
   @media (min-width: 700px) {
     .nav-list-wrapper-label {
       color: #ffccca;
     }
     .nav-input:checked ~ .nav-list-wrapper-label {
-        color: rgb(255, 255, 255);
+      color: rgb(255, 255, 255);
     }
+
+    .account-btn-wrapper {
+      button:first-of-type {
+        font-weight: bold;
+        color: #ffccca;
+      }
+      button:last-of-type {
+        font-weight: bold;
+        color: $Light-red-CTA-text;
+      }
+      button:last-of-type:hover {
+        color: white;
+      }
+    }
+  }
+  .account-options{
+       button:first-of-type {
+           color: $Light-red-CTA-text;
+        font-weight: bold;
+      }
+      button:last-of-type {
+        font-weight: bold;
+      }
+      button:last-of-type:hover {
+          color: $Light-red-CTA-text;
+      }
   }
 }
 

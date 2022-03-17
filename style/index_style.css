@@ -265,6 +265,27 @@ header .nav-input:checked ~ .nav-list-wrapper-label {
   header .nav-input:checked ~ .nav-list-wrapper-label {
     color: white;
   }
+  header .account-btn-wrapper button:first-of-type {
+    font-weight: bold;
+    color: #ffccca;
+  }
+  header .account-btn-wrapper button:last-of-type {
+    font-weight: bold;
+    color: #ff525d;
+  }
+  header .account-btn-wrapper button:last-of-type:hover {
+    color: white;
+  }
+}
+header .account-options button:first-of-type {
+  color: #ff525d;
+  font-weight: bold;
+}
+header .account-options button:last-of-type {
+  font-weight: bold;
+}
+header .account-options button:last-of-type:hover {
+  color: #ff525d;
 }
 
 header a {
