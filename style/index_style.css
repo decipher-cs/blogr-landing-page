@@ -333,7 +333,7 @@ header a {
 }
 
 .attribution a,
-footer a {
+footer, footer a {
   color: white;
 }
 
