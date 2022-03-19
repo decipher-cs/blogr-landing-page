@@ -1,3 +1,4 @@
+@import url("https://fonts.google.com/specimen/Overpass?preview.text_type=custom");
 #menu-btn-checkbox {
   display: none;
   width: 20px;
@@ -240,11 +241,7 @@
   }
 }
 
-@font-face {
-  src: url("https://fonts.google.com/specimen/Overpass?preview.text_type=custom") url("https://fonts.google.com/specimen/Ubuntu?preview.text_type=custom");
-  font-family: Overpass, Ubuntu, serif;
-}
-* {
+body {
   font-family: Overpass, Ubuntu, serif;
 }
 

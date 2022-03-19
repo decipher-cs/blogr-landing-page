@@ -1,13 +1,15 @@
-@font-face {
-  src: 
-      // - Weights: 300, 600
-    url("https://fonts.google.com/specimen/Overpass?preview.text_type=custom")
-    // - Weights: 400, 500, 700
-    url("https://fonts.google.com/specimen/Ubuntu?preview.text_type=custom");
-  font-family: Overpass, Ubuntu, serif;
-}
+// @font-face {
+//   src: 
+//       // - Weights: 300, 600
+//     url("https://fonts.google.com/specimen/Overpass?preview.text_type=custom")
+//     // - Weights: 400, 500, 700
+//     url("https://fonts.google.com/specimen/Ubuntu?preview.text_type=custom");
+//   font-family: Overpass, Ubuntu, serif;
+// }
 
-* {
+@import url("https://fonts.google.com/specimen/Overpass?preview.text_type=custom");
+
+body {
   font-family: Overpass, Ubuntu, serif;
 }
 $line-height: 29px;
