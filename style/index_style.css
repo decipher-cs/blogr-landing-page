@@ -304,14 +304,14 @@ header a {
 .content-section-one h3,
 .section-one-content-wrapper h3 {
   font-size: 1.6rem;
-  line-height: 25px;
+  line-height: 29px;
   color: #2c2d3f;
 }
 .content-section-one p,
 .section-one-content-wrapper p {
   font-size: 0.9rem;
   color: #4b5862;
-  line-height: 25px;
+  line-height: 29px;
 }
 @media (min-width: 700px) {
   .content-section-one,
@@ -326,13 +326,13 @@ header a {
 }
 .section-two-content-wrapper h3 {
   font-size: 1.6rem;
-  line-height: 25px;
+  line-height: 29px;
   color: white;
 }
 .section-two-content-wrapper p {
   font-size: 0.9rem;
   color: white;
-  line-height: 25px;
+  line-height: 29px;
 }
 @media (min-width: 700px) {
   .section-two-content-wrapper {
@@ -348,14 +348,14 @@ header a {
 .content-section-three h3,
 .section-three-content-wrapper h3 {
   font-size: 1.6rem;
-  line-height: 25px;
+  line-height: 29px;
   color: #2c2d3f;
 }
 .content-section-three p,
 .section-three-content-wrapper p {
   font-size: 0.9rem;
   color: #4b5862;
-  line-height: 25px;
+  line-height: 29px;
 }
 @media (min-width: 700px) {
   .content-section-three,
