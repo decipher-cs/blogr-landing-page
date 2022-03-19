@@ -85,7 +85,7 @@ button {
     position: absolute;
     display: inline;
     padding: 0px 0.4em;
-    @media (min-width: 650px) {
+    @media (min-width: 800px) {
       content: url("/images/icon-arrow-light.svg");
     }
     content: url("/images/icon-arrow-dark.svg");
